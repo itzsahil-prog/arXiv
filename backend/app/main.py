@@ -1,6 +1,6 @@
 """Overlap API and static frontend server.
 
-Run from the backend folder:  python -m uvicorn app.main:app --port 8000
+python -m uvicorn app.main:app --port 8000
 """
 import json
 import os
@@ -13,7 +13,7 @@ from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import ingest, jobs, report
+from backend.app import ingest, jobs, report
 from .db import BASE, IndexEmpty, appdb, index
 from .engine import analyze
 
